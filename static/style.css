@@ -20,17 +20,14 @@ body {
 }
 
 .sidebar {
+    box-sizing: border-box;
     position: fixed;
     left: 0;
     top: 0;
     width: 11vw;
     height: 100vh;
-    margin: 30px;
     padding: 30px;
-    overflow-y: scroll;
-    
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    overflow-y: auto;
 }
 
 .sidebar::-webkit-scrollbar {

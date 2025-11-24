@@ -288,6 +288,9 @@ async function updateSidebarGames() {
     });
 
     await Promise.all(fetches);
+const spacer = document.createElement("div");
+spacer.style.height = "50px";
+sidebar.appendChild(spacer);
 }
 
 

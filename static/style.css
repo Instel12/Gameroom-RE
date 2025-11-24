@@ -1,0 +1,70 @@
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: "Press Start 2P";
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    width: 100%;
+    height: 35vh;
+    background-image: url("banner.gif");
+    background-color: #cc4331;
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 11vw;
+    height: 100vh;
+    margin: 30px;
+    padding: 30px;
+    overflow-y: scroll;
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    background-color: #2f2f2f;
+    position: absolute;
+    left: 15vw;
+    top: 0;
+    width: 84.9%;
+    min-height: 100vh;
+}
+
+.pagemargin {
+    margin: 50px;
+    padding: 50px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #444;
+}
+
+.warning {
+    color: red;
+}
+
+a {
+    color: #cc4331;
+    cursor: pointer;
+}
+
+iframe {
+    border: none;
+}

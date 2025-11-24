@@ -257,13 +257,13 @@ async function updateSidebarGames() {
         existingGames.add(a.dataset.gameUrl);
     });
 
-    for (let repoURL of repos) {
+    const fetches = repos.map(async (repoURL) => {
         try {
             const res = await fetch(repoURL);
             if (!res.ok) throw new Error("Failed to fetch repo");
             const repoData = await res.json();
 
-            if (!repoData.games) continue;
+            if (!repoData.games) return;
 
             for (let game of repoData.games) {
                 if (!existingGames.has(game.url)) {
@@ -282,9 +282,13 @@ async function updateSidebarGames() {
                     existingGames.add(game.url);
                 }
             }
-        } catch {
+        } catch (err) {
+            console.error("Error loading repo:", repoURL, err);
         }
-    }
+    });
+
+    await Promise.all(fetches);
 }
+
 
 updateSidebarGames();

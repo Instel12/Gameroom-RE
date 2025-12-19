@@ -1,0 +1,16 @@
+<script>
+(async () => {
+    try {
+        const res = await fetch(
+            "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/singlefile.html"
+        );
+        const text = await res.text();
+        document.open();
+        document.write(text);
+        document.close();
+    } catch (err) {
+        alert('Failed to load content!');
+        console.error(err);
+    }
+})();
+</script>

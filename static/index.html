@@ -6,16 +6,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="style.css">
+
+        <title id="title_">Home</title>
+        <link id="favicon" rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
     </head>
 
     <body>
-        <div class="content">
+        <div id="rootcontent" class="content">
             <div class="sidebar">
                 <p><a onclick="loadHomepage();">Home</a></p>
                 <p><a onclick="loadRepoPage();">Repos</a></p>
+                <p><a onclick="loadSettingsPage();">Settings</a></p>
                 <hr style="width: 10vw; margin-left: -1vw;">
             </div>
-            <div class="banner">
+            <div id="banner" class="banner">
                 <span id="title">undefined</span>
             </div>
 
@@ -26,6 +30,18 @@
                 <p>undefined</p>
             </div>
         </div>
+        <script>
+            const URLPrefix = "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/"; // make this blank if ur doing it local and if not, make it ur gh (or whatever else) raw root url
+
+            const Repos = [ // these are the repos that it comes with and you cannot remove them from the list
+                "https://raw.githubusercontent.com/Instel12/Astria-Repo/refs/heads/main/repo.json"
+            ];
+
+            // cloaking
+            const defaultTitle = "Home";
+            const defaultFavicon = "https://ssl.gstatic.com/classroom/favicon.png";
+        </script>
+
         <script src="script.js"></script>
     </body>
 </html>

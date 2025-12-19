@@ -87,7 +87,7 @@ function loadHomepage() {
 
 async function aboutblank() {
     try {
-        const res = await fetch(URLPrefix + 'singlefile.html?t=' + Date.now());
+        const res = await fetch('https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/singlefile.html?t=' + Date.now());
         const text = await res.text();
         const newWindow = window.open('about:blank', '_blank');
         if (newWindow) {

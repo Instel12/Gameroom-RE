@@ -38,7 +38,7 @@ function refreshbanner() {
     if (localStorage.getItem("lowpowermode") == "true") {
         banner.style.backgroundImage = 'url("")';
     } else {
-        banner.style.backgroundImage = 'url("'+URLPrefix+'banner.gif")';
+banner.style.backgroundImage = 'url("' + URLPrefix + 'banner.gif?t=' + Date.now() + '")';
     }
 }
 
@@ -87,7 +87,7 @@ function loadHomepage() {
 
 async function aboutblank() {
     try {
-        const res = await fetch(URLPrefix + 'singlefile.html');
+        const res = await fetch(URLPrefix + 'singlefile.html?t=' + Date.now());
         const text = await res.text();
         const newWindow = window.open('about:blank', '_blank');
         if (newWindow) {
@@ -387,7 +387,9 @@ function loadGamePage(gameTitle, gameUrl) {
             </style>
         </head>
         <body>
-            <button id="fullscreenBtn"><img src="${URLPrefix}download.png"></button>
+            <button id="fullscreenBtn">
+                <img src="' + URLPrefix + 'download.png?t=' + Date.now() + '">
+            </button>
             <script>
                 const gameUrl = "${gameUrl}";
                 const gameTitle = "${gameTitle}";

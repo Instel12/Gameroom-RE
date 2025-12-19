@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <!-- CSS from jsDelivr with timestamp -->
-    <link id="mainCSS" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/style.css?time=">
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/style.css">
 
-    <title id="title_">Home</title>
-    <link id="favicon" rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
-    <style id="dynamicBanner">
-        .banner {
-            background-image: url("");
-        }
-    </style>
-</head>
+        <title id="title_">Home</title>
+        <link id="favicon" rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
+    </head>
 
-<body>
-    <div id="rootcontent" class="content">
-        <div class="sidebar">
-            <p><a onclick="loadHomepage();">Home</a></p>
-            <p><a onclick="loadRepoPage();">Repos</a></p>
-            <p><a onclick="loadSettingsPage();">Settings</a></p>
-            <hr style="width: 10vw; margin-left: -1vw;">
+    <body>
+        <div id="rootcontent" class="content">
+            <div class="sidebar">
+                <p><a onclick="loadHomepage();">Home</a></p>
+                <p><a onclick="loadRepoPage();">Repos</a></p>
+                <p><a onclick="loadSettingsPage();">Settings</a></p>
+                <hr style="width: 10vw; margin-left: -1vw;">
+            </div>
+            <div id="banner" class="banner">
+                <span id="title">undefined</span>
+            </div>
+
+            <div style="margin-top: -40px;" class="pagemargin" id="maincontent">
+                <center>
+                    <h1>undefined</h1>
+                </center>
+                <p>undefined</p>
+            </div>
         </div>
-        <div id="banner" class="banner">
-            <span id="title">undefined</span>
-        </div>
-
-        <div style="margin-top: -40px;" class="pagemargin" id="maincontent">
-            <center>
-                <h1>undefined</h1>
-            </center>
-            <p>undefined</p>
-        </div>
-    </div>
-
-<script>
-            const timestamp = Date.now();
-
-        const URLPrefix = `https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/?time=${timestamp}`;
-
-        document.getElementById('mainCSS').href = `https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/style.css?time=${timestamp}`;
-
-        document.getElementById('dynamicBanner').textContent = `
-            .banner {
-                background-image: url('https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/banner.gif?time=${timestamp}');
-            }
-        `;
-</script>
-
         <script>
+            const URLPrefix = "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/"; // make this blank if ur doing it local and if not, make it ur gh (or whatever else) raw root (static if its a full fork) url
+
             const Repos = [ // these are the repos that it comes with and you cannot remove them from the list
                 "https://raw.githubusercontent.com/Instel12/Astria-Repo/refs/heads/main/repo.json"
             ];
@@ -61,7 +42,6 @@
             const defaultFavicon = "https://ssl.gstatic.com/classroom/favicon.png";
         </script>
 
-    <script src="https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/script.js?time="></script>
-</body>
+        <script src="https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/script.js"></script>
+    </body>
 </html>
-

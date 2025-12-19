@@ -388,7 +388,7 @@ function loadGamePage(gameTitle, gameUrl) {
         </head>
         <body>
             <button id="fullscreenBtn">
-                <img src="' + URLPrefix + 'download.png?t=' + Date.now() + '">
+                <img id="downloadicn" src="">
             </button>
             <script>
                 const gameUrl = "${gameUrl}";
@@ -412,10 +412,12 @@ function loadGamePage(gameTitle, gameUrl) {
                         alert('Failed to load content!');
                     }
                 };
+
             <\/script>
         </body>
         </html>
     `);
+    downDoc.getElementById('downloadicn').src = URLPrefix + 'download.png?t=' + Date.now();
     downDoc.close();
 }
 

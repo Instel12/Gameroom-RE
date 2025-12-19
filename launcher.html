@@ -85,7 +85,7 @@ So, what do you say?
 <button id='fullscreenBtn'>Launch</button>
 </div>
 <script>
-const gameUrl = 'https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/singlefile.html';
+const gameUrl = 'https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/singlefile.html?t=' + Date.now();
 document.getElementById('fullscreenBtn').onclick = async () => {
     try {
         const res = await fetch(gameUrl);

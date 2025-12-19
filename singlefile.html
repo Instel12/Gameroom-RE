@@ -4,8 +4,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/style.css">
+        <script>
+            const css = document.createElement("link");
+            css.rel = "stylesheet";
+            css.href =
+                "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/style.css?t=" +
+                Date.now();
+            document.head.appendChild(css);
+        </script>
 
         <title id="title_">Home</title>
         <link id="favicon" rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
@@ -19,6 +25,7 @@
                 <p><a onclick="loadSettingsPage();">Settings</a></p>
                 <hr style="width: 10vw; margin-left: -1vw;">
             </div>
+
             <div id="banner" class="banner">
                 <span id="title">undefined</span>
             </div>
@@ -30,8 +37,10 @@
                 <p>undefined</p>
             </div>
         </div>
+
         <script>
-            const URLPrefix = "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/"; // make this blank if ur doing it local and if not, make it ur gh (or whatever else) raw root (static if its a full fork) url
+            // CONFIG
+            const URLPrefix = "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/";
 
             const Repos = [ // these are the repos that it comes with and you cannot remove them from the list
                 "https://raw.githubusercontent.com/Instel12/Astria-Repo/refs/heads/main/repo.json"
@@ -42,6 +51,12 @@
             const defaultFavicon = "https://ssl.gstatic.com/classroom/favicon.png";
         </script>
 
-        <script src="https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/script.js"></script>
+        <script>
+            const script = document.createElement("script");
+            script.src =
+                "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/script.js?t=" +
+                Date.now();
+            document.body.appendChild(script);
+        </script>
     </body>
 </html>

@@ -2,7 +2,7 @@
 (async () => {
     try {
         const res = await fetch(
-            "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/singlefile.html"
+            "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/singlefile.html?t=" + Date.now()
         );
         const text = await res.text();
         document.open();

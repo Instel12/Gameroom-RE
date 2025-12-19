@@ -33,7 +33,7 @@ function refreshbanner() {
     if (localStorage.getItem("lowpowermode") == "true") {
         banner.style.backgroundImage = 'url("")';
     } else {
-        banner.style.backgroundImage = 'url("'+URLPrefix+'static/banner.gif")';
+        banner.style.backgroundImage = 'url("'+URLPrefix+'banner.gif")';
     }
 }
 

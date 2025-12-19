@@ -18,6 +18,7 @@ localStorage.setItem("repos", JSON.stringify(repos));
 
 
 function loadSettings() {
+    try{
     const savedTitle = localStorage.getItem("pageTitle");
     const savedFavicon = localStorage.getItem("faviconUrl");
 
@@ -25,6 +26,10 @@ function loadSettings() {
     pagefavicon.href = savedFavicon || defaultFavicon;
 
     title.textContent = savedTitle || defaultTitle;
+    }
+    catch (err){
+        alert(err)
+    }
 }
 
 loadSettings();

@@ -6,6 +6,11 @@ const pagefavicon = document.getElementById("favicon");
 const rootcontent = document.getElementById("rootcontent");
 
 let repos = JSON.parse(localStorage.getItem("repos") || "[]");
+let CACHED_HTML = "";
+
+document.addEventListener("DOMContentLoaded", () => {
+    CACHED_HTML = document.documentElement.outerHTML;
+});
 
 
 Repos.forEach(repo => {
@@ -85,22 +90,17 @@ function loadHomepage() {
     `;
 }
 
-async function aboutblank() {
-    try {
-        const res = await fetch('https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/singlefile.html?t=' + Date.now());
-        const text = await res.text();
-        const newWindow = window.open('about:blank', '_blank');
-        if (newWindow) {
-            newWindow.document.open();
-            newWindow.document.write(text);
-            newWindow.document.close();
-        } else {
-            alert('Pop-up blocked. Please allow pop-ups for this site.');
-        }
-    } catch (err) {
-        alert('Failed to load content!');
+function aboutblank() {
+    const newWindow = window.open("about:blank", "_blank");
+    if (!newWindow) {
+        alert("Pop-up blocked. Please allow pop-ups for this site.");
+        return;
     }
-};
+
+    newWindow.document.open();
+    newWindow.document.write(CACHED_HTML);
+    newWindow.document.close();
+}
 
 function loadSettingsPage() {
     rootcontent.scrollTop = 0;

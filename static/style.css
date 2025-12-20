@@ -22,14 +22,12 @@ body {
     position: fixed;
     left: 1vw;
     top: 1vh;
-    width: 11vw;
+    width: 13vw;
     height: calc(100vh - 2vh);
     /* padding: 30px; */
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
-
 
 .sidebar::-webkit-scrollbar {
     display: none;

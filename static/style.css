@@ -69,3 +69,67 @@ iframe {
   width: calc(99% - 50px);
   height: 30px;
 }
+
+.popupbg {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #cc4331;
+    width: 60%;
+    max-width: 500px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    z-index: 1000;
+}
+
+.popup h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.popupchild {
+    background-color: #444;
+    color: white;
+
+    padding: 16px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.popupchild ul {
+    margin: 8px 0 12px 20px;
+}
+
+.popupchild p {
+    margin: 0 0 8px 0;
+}
+
+.popupchild small {
+    opacity: 0.8;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.agreebtns{
+    width: 100px;
+}

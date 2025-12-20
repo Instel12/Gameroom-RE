@@ -4,6 +4,7 @@ const banner = document.getElementById("banner");
 const pagetitle = document.getElementById("title_");
 const pagefavicon = document.getElementById("favicon");
 const rootcontent = document.getElementById("rootcontent");
+const agreementscreen = document.getElementById("agreementpopup");
 
 let repos = JSON.parse(localStorage.getItem("repos") || "[]");
 let CACHED_HTML = "";
@@ -11,7 +12,6 @@ let CACHED_HTML = "";
 document.addEventListener("DOMContentLoaded", () => {
     CACHED_HTML = document.documentElement.outerHTML;
 });
-
 
 Repos.forEach(repo => {
     if (!repos.includes(repo)) {
@@ -467,3 +467,21 @@ async function updateSidebarGames() {
 }
 
 updateSidebarGames();
+
+if (localStorage.getItem("agreement") == "true") {
+    agreementscreen.remove();
+}
+
+function agreestats() {
+    const script1 = document.createElement("script");
+    script1.src = "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/stats.js?t=" + Date.now();
+    document.body.appendChild(script1);
+
+    localStorage.setItem("agreement", "true");
+    agreementscreen.remove();
+}
+
+function declinestats() {
+    localStorage.setItem("agreement", "true");
+    agreementscreen.remove();
+}

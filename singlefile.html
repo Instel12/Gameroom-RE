@@ -38,6 +38,39 @@
             </div>
         </div>
 
+        <div id="agreementpopup">
+            <div class="popupbg"></div>
+
+            <div class="popup">
+                <h1>Agreement</h1>
+
+                <div class="popupchild">
+                    <p>
+                        Gameroom takes your privacy very seriously! We would like to ask
+                        if you want to opt in to sending anonymous device statistics so we
+                        can optimize our services for all kinds of devices.
+                    </p>
+
+                    <p>The information we collect is:</p>
+
+                    <ul>
+                        <li>Page load time</li>
+                        <li>CPU core count</li>
+                        <li>URL you are visiting from</li>
+                    </ul>
+
+                    <p>
+                        Would you like to send this information?
+                        <br>
+                    </p>
+                </div>
+                <div class="button-row">
+                    <button onclick="agreestats();" class="agreebtns">Yes</button>
+                    <button onclick="declinestats()" class="agreebtns">No</button>
+                </div>
+            </div>
+        </div>
+
         <script>
             // CONFIG
             const URLPrefix = "https://raw.githubusercontent.com/Instel12/Gameroom-RE/refs/heads/main/static/";

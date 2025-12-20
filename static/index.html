@@ -30,6 +30,40 @@
                 <p>undefined</p>
             </div>
         </div>
+
+        <div id="agreementpopup">
+            <div class="popupbg"></div>
+
+            <div class="popup">
+                <h1>Agreement</h1>
+
+                <div class="popupchild">
+                    <p>
+                        Gameroom takes your privacy very seriously! We would like to ask
+                        if you want to opt in to sending anonymous device statistics so we
+                        can optimize our services for all kinds of devices.
+                    </p>
+
+                    <p>The information we collect is:</p>
+
+                    <ul>
+                        <li>Page load time</li>
+                        <li>CPU core count</li>
+                        <li>URL you are visiting from</li>
+                    </ul>
+
+                    <p>
+                        Would you like to send this information?
+                        <br>
+                    </p>
+                </div>
+                <div class="button-row">
+                    <button onclick="agreestats();" class="agreebtns">Yes</button>
+                    <button onclick="declinestats()" class="agreebtns">No</button>
+                </div>
+            </div>
+        </div>
+
         <script>
             const URLPrefix = ""; // make this blank if ur doing it local and if not, make it jsdelivr thing on anything that supports ?t= and its reccomended to have smth that supports cache
 
@@ -42,14 +76,6 @@
             const defaultFavicon = "https://ssl.gstatic.com/classroom/favicon.png";
         </script>
 
-        <script>
-            const script1 = document.createElement("script");
-            script1.src =
-                "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/stats.js?t=" +
-                Date.now();
-            document.body.appendChild(script1);
-        </script>
-        
         <script src="script.js"></script>
     </body>
 </html>

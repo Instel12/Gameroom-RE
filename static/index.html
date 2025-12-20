@@ -17,7 +17,7 @@
                 <p><a onclick="loadHomepage();">Home</a></p>
                 <p><a onclick="loadRepoPage();">Repos</a></p>
                 <p><a onclick="loadSettingsPage();">Settings</a></p>
-                <hr style="width: 10vw; margin-left: -1vw;">
+                <hr style="width: 110%; margin-left: -1%;">
             </div>
             <div id="banner" class="banner">
                 <span id="title">undefined</span>
@@ -42,6 +42,14 @@
             const defaultFavicon = "https://ssl.gstatic.com/classroom/favicon.png";
         </script>
 
+        <script>
+            const script1 = document.createElement("script");
+            script1.src =
+                "https://cdn.jsdelivr.net/gh/Instel12/Gameroom-RE@main/static/stats.js?t=" +
+                Date.now();
+            document.body.appendChild(script1);
+        </script>
+        
         <script src="script.js"></script>
     </body>
 </html>
